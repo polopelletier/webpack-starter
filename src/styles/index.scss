@@ -1,5 +1,6 @@
-$body-color: blue;
+$body-color: white;
 
 body {
-  background-color: $body-color;
+  color: $body-color;
+  background-image: url("assets/carbon.jpg");
 }
