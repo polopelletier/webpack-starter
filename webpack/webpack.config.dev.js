@@ -26,10 +26,6 @@ module.exports = merge(common, {
 				test: /\.(js)$/,
 				include: Path.resolve(__dirname, "../src/client"),
 				loader: "babel-loader"
-			},
-			{
-				test: /\.s?css$/i,
-				use: ["style-loader", "css-loader?sourceMap=true", "sass-loader"]
 			}
 		]
 	}

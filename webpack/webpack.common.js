@@ -1,6 +1,7 @@
 const Path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const entriesJSON = require("../config/entries.json");
 
@@ -27,7 +28,10 @@ module.exports = {
 		new CleanWebpackPlugin(["build"], { root: Path.resolve(__dirname, "..") }),
 		new CopyWebpackPlugin([
 			{ from: Path.resolve(__dirname, "../public"), to: "public" }
-		])
+		]),
+		new MiniCssExtractPlugin({
+			filename: "bundle.css"
+		})
 	],
 	resolve: {
 		alias: {
@@ -51,6 +55,14 @@ module.exports = {
 					}
 				}
 			},
+			{
+				test: /\.s?css/i,
+				use : [
+					MiniCssExtractPlugin.loader,
+					"css-loader",
+					"sass-loader"
+				]
+			}
 		]
 	}
 };
