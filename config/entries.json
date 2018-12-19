@@ -1,0 +1,11 @@
+{
+	"page1": {
+		"filename": "src/client/page1.js"
+	},
+	"page2": {
+		"filename": "src/client/page2.js"
+	},
+	"styles": {
+		"filename": "src/styles/bundle.js"
+	}
+}
