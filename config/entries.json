@@ -5,6 +5,9 @@
 	"page2": {
 		"filename": "src/client/page2.js"
 	},
+	"animals": {
+		"filename": "src/client/animalTest.js"	
+	},
 	"styles": {
 		"filename": "src/styles/bundle.js"
 	}

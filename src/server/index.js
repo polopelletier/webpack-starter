@@ -23,6 +23,13 @@ app.get("/", function(req, res) {
 	res.send("Hello world");
 });
 
+app.get("/animals", function(req, res) {
+	res.render("page", {
+		title: "Animals",
+		script: "js/animals.js"
+	});
+});
+
 app.get("/page1", function(req, res) {
 	res.render("page", {
 		title: "Page 1",
